@@ -1,0 +1,81 @@
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;  
+    object-fit: cover;   
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    margin: 20px auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.yuchingkao-name {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-size: 8.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, 
+        #4A00E0 0%, 
+        #8E2DE2 25%, 
+        #FF5F6D 50%, 
+        #FFC371 75%, 
+        #4A00E0 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 
+        3px 3px 0px rgba(0,0,0,0.1),
+        6px 6px 0px rgba(0,0,0,0.05);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    animation: 
+        gradientFlow 8s ease infinite,
+        floatEffect 3s ease-in-out infinite alternate;
+    display: block;
+    text-align: center;
+    padding: 15px 30px;
+    margin: 25px 0;
+    position: relative;
+    line-height: 1.2;
+}
+
+.yuchingkao-name::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    right: -10px;
+    bottom: -5px;
+    background: linear-gradient(45deg, 
+        transparent 30%, 
+        rgba(142, 45, 226, 0.1) 50%, 
+        transparent 70%);
+    z-index: -1;
+    border-radius: 10px;
+}
+
+
+.yuchingkao-name {
+    color: #4A00E0;
+    text-shadow: 
+        0 0 15px rgba(74, 0, 224, 0.4),
+        0 0 30px rgba(74, 0, 224, 0.2);
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes floatEffect {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
